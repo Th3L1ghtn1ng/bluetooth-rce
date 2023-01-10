@@ -51,9 +51,10 @@ def main(argv):
     while True:
         request = "SEND REQUEST" # The request you want to send
         sock.send(request.encode())
-        if not sock.isConnected(): # check if the connection closed
-            print('Connection closed. Exiting loop')
-            break
+           if not data: # check if the connection closed
+        print('Connection closed. Exiting loop')
+        break
+
     sock.close()
 
 if __name__ == "__main__":
